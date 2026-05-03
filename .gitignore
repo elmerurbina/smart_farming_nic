@@ -1,0 +1,28 @@
+# 🔧 Arduino build files
+*.ino.cpp
+*.ino.cpp.d
+*.elf
+*.hex
+
+# 📦 Arduino cache / temp
+*.log
+*.tmp
+
+# 🧰 Arduino IDE 2.x
+.arduinoIDE/
+arduino-ide/
+
+# 📁 Build folders (sometimes created)
+build/
+dist/
+
+# 💻 OS files
+.DS_Store
+Thumbs.db
+
+# 🧪 VS Code (optional)
+.vscode/
+
+# 📦 Libraries (only ignore if using Library Manager)
+# Uncomment if needed:
+# libraries/

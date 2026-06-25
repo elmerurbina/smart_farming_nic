@@ -1,18 +1,36 @@
 #include <Arduino.h>
+#include "infrastructure/sensors/MoistureSensor.h"
+#include "infrastructure/display/OledDisplay.h"
 
-// put function declarations here:
-int myFunction(int, int);
+MoistureSensor sensor(7, A0);
+OledDisplay screen;
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+    Serial.begin(115200);
+
+    sensor.begin();
+    screen.begin();
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+    MoistureData data = sensor.read();
+
+    Serial.print("ADC=");
+    Serial.print(data.raw);
+    Serial.print(" Humedad=");
+    Serial.print(data.percent);
+    Serial.println("%");
+
+    // STREAM DATA (plotter)
+    Serial.print("Sensor:");
+    Serial.print(data.raw);
+    Serial.print(",");
+    Serial.print("Humedad:");
+    Serial.println(data.percent);
+
+    // UI LAYER
+    screen.render(data);
+
+    delay(500);
 }

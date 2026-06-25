@@ -95,11 +95,16 @@ El proyecto está diseñado con una arquitectura modular y escalable, inspirada 
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
+
+**Lester Centeno**
+Lic. Ciencias de la Computacion
+MSC. Formulación, Administración y Evaluación de Proyectos
 
 **Elmer Urbina**  
-Ingeniería en Sistemas de Información  
+Ingeniería en Sistemas
 Enfoque en IoT, automatización y agricultura inteligente  
+
 
 ---
 

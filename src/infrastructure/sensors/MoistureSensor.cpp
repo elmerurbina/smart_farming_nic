@@ -21,7 +21,7 @@ MoistureData MoistureSensor::read() {
 
     digitalWrite(_powerPin, LOW);
 
-    data.percent = map(data.raw, 0, 1023, 0, 100);
+    data.percent = map(data.raw, 0, 255, 0, 100);
     data.percent = constrain(data.percent, 0, 100);
 
     return data;

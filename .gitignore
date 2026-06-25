@@ -26,3 +26,6 @@ Thumbs.db
 # 📦 Libraries (only ignore if using Library Manager)
 # Uncomment if needed:
 # libraries/
+
+#Ignore vscode AI rules
+.github\instructions\codacy.instructions.md
